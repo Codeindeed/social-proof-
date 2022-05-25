@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+:root {
+  /* ### Primary */
+
+  --color-Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --color-Soft-Pink: hsl(333, 80%, 67%);
+  /* 
+### Neutral */
+
+  --color-Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --color-Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --color-White: hsl(0, 0%, 100%);
+}
+html {
+  font-size: 62.5%;
+  font-family: "League Spartan", sans-serif;
+}
+@media only screen and (max-width: 1089px) {
+  html {
+    font-size: 50%;
+    font-family: "League Spartan", sans-serif;
+  }
+}
+
+body {
+  background-color: var(--color-White);
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 10px left 10px bottom 10px left 10px;
+  display: grid;
+  place-items: center;
+}
+.container {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 3rem;
+  min-height: 90vh;
+  padding: 7rem 7rem;
+}
+.header__container {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+}
+@media only screen and (max-width: 946px) {
+  .header__container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.header__texts {
+  display: grid;
+  grid-gap: 2rem;
+}
+.text__1 {
+  /* padding-right: 12rem; */
+  text-align: left;
+  font-weight: 700;
+  font-size: 7rem;
+  line-height: 1;
+  color: var(--color-Very-Dark-Magenta);
+}
+.text__content {
+  font-size: 2rem;
+  line-height: 1.3;
+  padding-right: 10rem;
+  color: var(--color-Dark-Grayish-Magenta);
+}
+.header__rating {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 0 12rem;
+}
+@media only screen and (max-width: 946px) {
+  .header__rating {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.header__rate {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2rem;
+  padding: 2rem 6rem;
+  background-color: var(--color-Light-Grayish-Magenta);
+  border-radius: 1.2rem;
+}
+
+.rate__text {
+  font-size: 1.3rem;
+  color: var(--color-Dark-Grayish-Magenta);
+}
+.rate__1 {
+  justify-self: start;
+}
+.rate__2 {
+  justify-self: center;
+}
+.rate__3 {
+  justify-self: end;
+}
+@media only screen and (max-width: 946px) {
+  .header__rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .rate__1 {
+    justify-self: center;
+  }
+  .rate__2 {
+    justify-self: center;
+  }
+  .rate__3 {
+    justify-self: center;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+@media only screen and (max-width: 946px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.cards > * {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-gap: 3rem;
+  background-color: var(--color-Very-Dark-Magenta);
+  padding: 3rem;
+  border-radius: 1.2rem;
+}
+.header__card {
+  justify-self: start;
+  display: grid;
+  grid-template-columns: min-content minmax(min-content, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+}
+.header__card img {
+  border-radius: 5rem;
+  width: 6rem;
+}
+.card__text {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-White);
+  font-weight: 500;
+}
+.card__text span {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-Soft-Pink);
+}
+.card__content {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  padding: 1rem 0;
+  color: var(--color-White);
+}
+.card__1 {
+  align-self: start;
+  margin-bottom: 4rem;
+}
+.card__2 {
+  align-self: center;
+}
+.card__3 {
+  align-self: end;
+  margin-top: 4rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
